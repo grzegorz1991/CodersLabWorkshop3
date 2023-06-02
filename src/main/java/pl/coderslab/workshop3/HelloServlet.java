@@ -32,8 +32,6 @@ public class HelloServlet extends HttpServlet {
 
     public void testDao(){
 
-        UserDao dao = new UserDao();
-        dao.addUser(new User("Email", "Username","password"));
 
     }
 }

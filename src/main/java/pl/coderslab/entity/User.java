@@ -1,23 +1,13 @@
 package pl.coderslab.entity;
 
 public class User {
+
     private int id;
-    private String email;
-    private String username;
 
-    public User(String email, String username, String hashedPassword) {
-        this.email = email;
-        this.username = username;
-        this.hashedPassword = hashedPassword;
-    }
+    private String userName;
 
-    private String hashedPassword;
 
-    public User(int id, String email, String username, String hashedPassword) {
-        this.id = id;
-        this.email = email;
-        this.username = username;
-        this.hashedPassword = hashedPassword;
+    public User() {
     }
 
     public int getId() {
@@ -28,6 +18,14 @@ public class User {
         this.id = id;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -36,29 +34,18 @@ public class User {
         this.email = email;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getHashedPassword() {
-        return hashedPassword;
-    }
+    private String email;
 
-    public void setHashedPassword(String hashedPassword) {
-        this.hashedPassword = hashedPassword;
-    }
+    private String password;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + hashedPassword + '\'' +
-                '}';
-    }
+
+
 }
