@@ -4,6 +4,13 @@ public class User {
     private int id;
     private String email;
     private String username;
+
+    public User(String email, String username, String hashedPassword) {
+        this.email = email;
+        this.username = username;
+        this.hashedPassword = hashedPassword;
+    }
+
     private String hashedPassword;
 
     public User(int id, String email, String username, String hashedPassword) {
